@@ -1,0 +1,116 @@
+﻿@{
+    ViewData["Title"] = "Add Product";
+}
+@model AgriEnergyConnectApp.Models.Product
+
+@*
+    Aman Adams
+    ST10290748
+    Prog3A POE PART 2
+    Reference: W3 Schools for Format and Style
+*@
+
+<!-- Page Header -->
+<div class="text-center" style="margin-bottom: 40px;">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+    <h1 style="font-size: 2.5em; font-weight: bold; color: darkslategrey; font-family: Ubuntu, sans-serif;">Add Product</h1>
+</div>
+
+<!-- Add Product Form -->
+<form asp-action="AddProduct" asp-controller="Farmer" method="post" style="border:1px solid #ccc; margin-bottom: 40px; font-family: Poppins;">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <div class="container">
+        <h2>Product Details</h2>
+        <p>Please enter product information below:</p>
+        <hr>
+
+        <label for="Name"><b>Product Name</b></label>
+        <input asp-for="ProductName" placeholder="Enter product name" required />
+
+        <label for="Price"><b>Product Price</b></label>
+        <input asp-for="Price" placeholder="Enter product price" type="number" required />
+
+        <label for="Category"><b>Category</b></label>
+        <input asp-for="Category" placeholder="Enter product category" />
+
+        <label for="ImageUrl"><b>Image URL</b></label>
+        <input asp-for="ImageUrl" placeholder="Enter product image url" type="url" required />
+
+        <label for="ProductionDate"><b>Production Date</b></label>
+        <input asp-for="ProductionDate" type="date" required />
+
+        <input type="hidden" asp-for="FarmerId" />
+
+        <div class="clearfix">
+            <button type="submit" class="submitbtn">Add Product</button>
+            <button type="reset" class="cancelbtn">Clear</button>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("Add Product page loaded.");
+        });
+    </script>
+}
+
+<!-- Styles -->
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    input[type=text], input[type=date] {
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0 25px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        background: #f1f1f1;
+    }
+
+    input:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+    button {
+        background-color: darkslategrey;
+        color: white;
+        padding: 14px 20px;
+        margin: 20px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+
+        button:hover {
+            opacity: 1;
+        }
+
+    .cancelbtn {
+        background-color: lightslategrey;
+    }
+
+    .cancelbtn, .submitbtn {
+        float: left;
+        width: 50%;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+</style>

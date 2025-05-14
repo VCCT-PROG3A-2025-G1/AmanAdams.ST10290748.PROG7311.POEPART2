@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AgriEnergyConnectApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AgriEnergyConnectApp.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+        @inject IHttpContextAccessor HttpContextAccessor
+        @{
+            var role = HttpContextAccessor.HttpContext.Session.GetString("UserRole");
+            var email = HttpContextAccessor.HttpContext.Session.GetString("UserEmail");
+        }
+
+        <body style="font-family: 'Poppins', sans-serif;">
+            <header style="background-color: darkslategray; color: white; padding: 20px; text-align: center;">
+                <h1 style="margin: 0; font-size: 2em;">AgriEnergy Connect Platform</h1>
+            </header>
+
+            <nav style="background-color: #2F4F4F; padding: 10px;">
+                <div style="display: flex; justify-content: center; gap: 30px;">
+                    @if (!string.IsNullOrEmpty(role))
+                    {
+                        <span style="color: white; align-self: center;">Welcome, @email!</span>
+
+                        @if (role == "Employee")
+                        {
+                            <a href="/Employee/AddFarmer" style="color: white; text-decoration: none;">Add Farmer</a>
+                            <a href="/Employee/ViewProducts" style="color: white; text-decoration: none;">View Products</a>
+                        }
+                        else if (role == "Farmer")
+                        {
+                            <a href="/Farmer/AddProduct" style="color: white; text-decoration: none;">Add Product</a>
+                        }
+
+                        <a href="/User/Logout" style="color: white; text-decoration: none;">Logout</a>
+                    }
+                    else
+                    {
+                        <a href="/Home/Index" style="color: white; text-decoration: none;">Home</a>
+                        <a href="/User/Login" style="color: white; text-decoration: none;">Login</a>
+                        <a href="/Home/AboutUs" style="color: white; text-decoration: none;">About Us</a>
+                        <a href = "/Home/ContactUs" style = "color: white; text-decoration: none;" >Contact Us </a >
+
+                    }
+                </div>
+            </nav>
+
+            <div class="container" style="margin: 30px auto; max-width: 960px;">
+                @RenderBody()
+            </div>
+        </body>
+
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2025 - AgriEnergyConnectApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

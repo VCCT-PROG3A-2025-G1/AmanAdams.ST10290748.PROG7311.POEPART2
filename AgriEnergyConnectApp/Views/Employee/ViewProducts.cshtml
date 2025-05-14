@@ -1,0 +1,103 @@
+﻿@model AgriEnergyConnectApp.Models.ProductFilter
+
+@{
+    ViewData["Title"] = "View Products";
+}
+
+@*
+    Aman Adams
+    ST10290748
+    Prog3A POE PART 2
+    Reference: W3 Schools for Format and Style
+*@
+
+<!-- Header -->
+<div class="text-center" style="margin-bottom: 40px;">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+    <h1 style="font-size: 2.5em; font-weight: bold; color: darkslategrey; font-family: Ubuntu, sans-serif;">View Products</h1>
+</div>
+
+<!-- Search and Filter Form -->
+<form method="get" asp-action="ViewProducts">
+    <input type="text" name="searchTerm" placeholder="Search..."
+           value="@Model.SearchTerm" />
+
+    <label for="startDate"><b>Start Date:</b></label>
+    <input type="date" name="startDate" value="@Model.StartDate?.ToString("yyyy-MM-dd")" />
+
+    <label for="endDate"><b>End Date:</b></label>
+    <input type="date" name="endDate" value="@Model.EndDate?.ToString("yyyy-MM-dd")" />
+
+    <button type="submit">Filter</button>
+</form>
+
+
+
+<!-- Results Table -->
+<table>
+    <thead>
+        <tr>
+            <th>Product</th>
+            <th>Category</th>
+            <th>Farmer</th>
+            <th>Production Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model.Products)
+        {
+            <tr>
+                <td>@product.ProductName</td>
+                <td>@product.Category</td>
+                <td>@product.Farmer</td>
+                <td>@product.ProductionDate.ToShortDateString()</td>
+            </tr>
+        } else{
+        <p style="color: gray;">No products found.</p>
+        }
+    </tbody>
+</table>
+
+<!-- Styles -->
+<style>
+    input[type=text], input[type=date] {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0 20px 0;
+        border: 1px solid #ccc;
+        background: #f1f1f1;
+    }
+
+    button {
+        background-color: darkslategrey;
+        color: white;
+        padding: 14px 20px;
+        margin: 20px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+
+    button:hover {
+        opacity: 1;
+    }
+
+    .cancelbtn {
+        background-color: lightslategrey;
+    }
+
+    .cancelbtn, .submitbtn {
+        float: left;
+        width: 48%;
+        margin-right: 2%;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+</style>
+
+

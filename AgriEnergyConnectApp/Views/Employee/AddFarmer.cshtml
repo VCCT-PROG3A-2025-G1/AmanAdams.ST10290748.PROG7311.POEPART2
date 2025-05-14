@@ -1,0 +1,114 @@
+﻿@{
+    ViewData["Title"] = "Add Farmer";
+}
+@model AgriEnergyConnectApp.Models.Farmer
+
+@*
+    Aman Adams
+    ST10290748
+    Prog3A POE PART 2
+    Reference: W3 Schools for Format and Style
+*@
+
+<!-- Page Header -->
+<div class="text-center" style="margin-bottom: 40px;">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu|Lora">
+    <h1 style="font-size: 2.5em; font-weight: bold; color: darkslategrey; font-family: Ubuntu, sans-serif;">Add New Farmer</h1>
+</div>
+
+<!-- Add Farmer Form -->
+<form asp-action="AddFarmer" asp-controller="Employee" method="post" style="border:1px solid #ccc; margin-bottom: 40px; font-family: Poppins;">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <div class="container">
+        <h2>Add Farmer</h2>
+        <p>Please enter the farmer's details:</p>
+        <hr>
+
+        <label for="Name"><b>Name</b></label>
+        <input asp-for="FarmerName" placeholder="Enter Farmer's Full Name" required />
+
+        <label for="Location"><b>Location</b></label>
+        <input asp-for="Location" placeholder="Enter Farmer's Location" required />
+
+        <label for="Email"><b>Email</b></label>
+        <input asp-for="Email" placeholder="Enter Farmer's Email" type="email" required />
+
+        <label for="Password"><b>Password</b></label>
+        <input asp-for="Password" placeholder="Enter Farmer's Password" type="password" required />
+
+
+        <div class="clearfix">
+            <button type="submit" class="submitbtn">Add Farmer</button>
+            <button type="reset" class="cancelbtn">Clear</button>
+        </div>
+    </div>
+</form>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("Add Farmer page loaded.");
+        });
+    </script>
+}
+
+<!-- Styles -->
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    input[type=text], input[type=email], input[type=password] {
+        width: 100%;
+        padding: 15px;
+        margin: 10px 0 25px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        background: #f1f1f1;
+    }
+
+    input:focus {
+        background-color: #ddd;
+        outline: none;
+    }
+
+    button {
+        background-color: darkslategrey;
+        color: white;
+        padding: 14px 20px;
+        margin: 20px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        opacity: 0.9;
+    }
+
+        button:hover {
+            opacity: 1;
+        }
+
+    .cancelbtn {
+        background-color: lightslategrey;
+    }
+
+    .cancelbtn, .submitbtn {
+        float: left;
+        width: 50%;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+</style>
+
+
