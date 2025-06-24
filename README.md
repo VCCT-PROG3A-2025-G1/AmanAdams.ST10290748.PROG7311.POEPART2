@@ -1,89 +1,77 @@
-AgriEnergy Connect
+🌱 AgriEnergy Connect
+AgriEnergy Connect is an innovative online platform designed to bridge the gap between South Africa’s agricultural sector and renewable energy technology providers. Developed as a Minimum Viable Concept (MVC) using C# and .NET, the platform promotes sustainable agricultural practices by offering tools for both green energy adoption and agricultural product marketing.
 
-AgriEnergy Connect online platform represents a progressive initiative that connects agriculture with renewable energy in South Africa. As a Minimum Viable Concept (MVC) platform using c+ , it promotes sustainable practices and incorporates renewable energy solutions. This platform acts as a crucial link between farmers and technological providers, fostering innovation for a more sustainable or green future.
+🚀 Introduction
+With the growing demand for environmentally conscious farming methods in South Africa, AgriEnergy Connect was developed to connect farmers with providers of renewable energy solutions. The platform empowers farmers to adopt sustainable practices while expanding their reach to customers through a digital product marketplace.
 
-Introduction
+Key Features:
 
-In light of the increasing demand for sustainable agricultural methods and the incorporation of green energy solutions in South Africa, the ambitious project named "AgriEnergy Connect" has been envisioned. This initiative seeks to create a groundbreaking web platform that unites the agricultural industry with green energy technology providers. The platform's key features consist of a Green Energy Marketplace and a space for farmers to market their products.
+🌿 A Green Energy Marketplace tailored for agricultural needs
 
-Green Energy Marketplace
+🧺 A Product Sales Platform where farmers can list and sell their produce
 
-A marketplace dedicated to green energy solutions designed specifically for agricultural requirements.
-Farmer Product Selling Platform
-A dedicated platform for farmers to offer their products for sale.
+⚙️ Core Functionality
+🔗 Database Integration
+A relational database is used to store and manage information about farmers and their products.
 
---Functionality Requirements
+(Sample data is populated to simulate real-world scenarios for demonstration purposes)
 
-Database Development and Integration:
+👥 User Roles & Authentication
+The system supports two user roles, each with specific permissions:
 
-Create and integrate a relational database to manage information about farmers and their offerings.
-Populate the database with example data to emulate real-world situations, ensuring that the demonstration is thorough and effective.
-User Role Definition and Authentication System:
+Farmer	
+- Add new products
+- View their own product listings as well as other farmers products
+Employee
+- Create new farmer profiles
+- View and filter all farmers' products based on criteria like date and type
+- Secure login and authentication are implemented to control access and protect user data.
 
-The system includes two user roles:
-
-Farmer: Can add products to their account and view their own listings.
-Employee: Can create new farmer profiles, access all products from individual farmers, and utilize filters for product searches.
-A secure login feature with authentication mechanisms is in place to safeguard user data and ensure access based on user roles.
-Functional Features for Farmers and Employees:
-
+🧰 Functional Features
 For Farmers:
+Add products with metadata such as:
 
-A product addition function where farmers can include new items with details like name, category, and production date.
+-Name
+-Category
+-Production Date
 
 For Employees:
+-Create and manage farmer profiles
+-Search and filter products across all farmers using:
+-Date range
+-Product category
 
-The ability to create new farmer profiles with vital information.
-The capability to view and filter an extensive list of products from any farmer based on criteria such as date range and product type.
+🛠️ Setup Instructions
+📋 Prerequisites
+Visual Studio (latest recommended)
 
--- Setup Instructions
-
-Follow these detailed steps to establish the development environment:
-
-Required Tools:
-
-Visual Studio (ideally the latest version)
 .NET Framework
-Microsoft.EntityFrameworkCore
-Downloading the Application:
 
-Clone the repository to your personal computer.
-Dependencies:
+Microsoft.EntityFrameworkCore NuGet package
 
-Open the project in Visual Studio.
-Make sure that all required dependencies, including .NET Framework and Microsoft.EntityFrameworkCore packages, are installed.
+📥 Cloning the Repository
 
-Installation and Setup
+https://github.com/VCCT-PROG3A-2025-G1/AmanAdams.ST10290748.PROG7311.POEPART2.git
 
-After cloning the repository and confirming that all dependencies are installed, adhere to these steps for installing and configuring the application:
+🔧 Installing Dependencies
+1- Open the project in Visual Studio.
 
-Access the root directory of the project.
-Execute the following command to restore any missing dependencies:
-Adjust the database connection string within the appsettings.json file.
-Run the database migrations.
-After setting up the database, you can proceed to build and operate the application.
-Building and Running the Prototype
-To construct and execute the prototype, follow these instructions:
+2- Ensure all dependencies are installed (e.g., .NET, EF Core).
 
-Compile the solution in Visual Studio.
-Run the application via Visual Studio or deploy it to a web hosting service.
-System Functionalities and User Roles
-Farmers:
-Include new products in their profiles.
-Examine their own product listings.
-Employees:
-Create new farmer profiles with critical information.
-Access and filter a detailed inventory of products from any farmer based on criteria such as date range and product type. gif
+3- Update the appsettings.json file with your database connection string.
 
-Get Started  
+4- Run migrations to create the database
 
-To begin with Agri-Energy Connect, adhere to the instructions for Installation and Setup as well as Building and Running the Prototype.
+▶️ Building and Running the Prototype
+1- Open the solution in Visual Studio.
 
--- Contributing  
-We invite contributions from the community! If you wish to contribute to Miss Minutes, please follow these guidelines:
+2- Build the project (Build > Build Solution).
 
-Clone the repository.  
-Create a new branch for your modifications.  
-Implement your changes and commit them with descriptive commit messages.  
-Push your changes to your cloned repository.  
-Submit a pull request, and we will evaluate your modifications.
+3- Run the application locally or deploy it to your hosting environment.
+
+🚀 Get Started
+To begin using AgriEnergy Connect, follow the Setup Instructions and Build and Run sections above.
+
+🤝 Contributing
+We welcome community contributions to improve and expand AgriEnergy Connect.
+
