@@ -13,6 +13,7 @@ Key Features:
 🧺 A Product Sales Platform where farmers can list and sell their produce
 
 
+
 ⚙️ Core Functionality
 
 🔗 Database Integration
@@ -20,6 +21,8 @@ Key Features:
 A relational database is used to store and manage information about farmers and their products.
 
 (Sample data is populated to simulate real-world scenarios for demonstration purposes)
+
+![Database](https://github.com/user-attachments/assets/9cabc26c-d85e-4ac5-a6f6-5a6147a902f1)
 
 
 👥 User Roles & Authentication
@@ -66,6 +69,7 @@ For Employees:
  ->Date range
  
  ->Product category
+
 
 
 🛠️ Setup Instructions
