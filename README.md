@@ -12,6 +12,7 @@ Key Features:
 
 🧺 A Product Sales Platform where farmers can list and sell their produce
 
+
 ⚙️ Core Functionality
 
 🔗 Database Integration
@@ -19,6 +20,7 @@ Key Features:
 A relational database is used to store and manage information about farmers and their products.
 
 (Sample data is populated to simulate real-world scenarios for demonstration purposes)
+
 
 👥 User Roles & Authentication
 
@@ -39,17 +41,20 @@ Employee
   
 - Secure login and authentication are implemented to control access and protect user data.
 
+
 🧰 Functional Features
 
 For Farmers:
 
-Add products with metadata such as:
+-View other farmers products
 
--Name
+-Add products with metadata such as:
 
--Category
+ ->Name
 
--Production Date
+ ->Category
+
+ ->Production Date
 
 
 For Employees:
@@ -58,8 +63,10 @@ For Employees:
 
 -Search and filter products across all farmers using:
 
- -Date range
- -Product category
+ ->Date range
+ 
+ ->Product category
+
 
 🛠️ Setup Instructions
 
@@ -71,9 +78,11 @@ Visual Studio (latest recommended)
 
 Microsoft.EntityFrameworkCore NuGet package
 
+
 📥 Cloning the Repository
 
 https://github.com/VCCT-PROG3A-2025-G1/AmanAdams.ST10290748.PROG7311.POEPART2.git
+
 
 🔧 Installing Dependencies
 
@@ -85,6 +94,7 @@ https://github.com/VCCT-PROG3A-2025-G1/AmanAdams.ST10290748.PROG7311.POEPART2.gi
 
 4- Run migrations to create the database
 
+
 ▶️ Building and Running the Prototype
 
 1- Open the solution in Visual Studio.
@@ -93,9 +103,11 @@ https://github.com/VCCT-PROG3A-2025-G1/AmanAdams.ST10290748.PROG7311.POEPART2.gi
 
 3- Run the application locally or deploy it to your hosting environment.
 
+
 🚀 Get Started
 
 To begin using AgriEnergy Connect, follow the Setup Instructions and Build and Run sections above.
+
 
 🤝 Contributing
 
